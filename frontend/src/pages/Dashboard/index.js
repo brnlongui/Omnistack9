@@ -31,11 +31,11 @@ export default function Dashboard(){
 
     async function handleAccept(id) {
         await api.post(`/bookings/${id}/approvals`);
-        setRequest(request.filter(request => request._id != id));
+        setRequest(request.filter(request => request._id !== id));
     };
     async function handleReject(id){ 
         await api.post(`/bookings/${id}/rejections`);
-        setRequest(request.filter(request => request._id != id));
+        setRequest(request.filter(request => request._id !== id));
     ;}
 
     return (
